@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src= "main.js"></script>
+    <style media="screen">
+      body{
+        background-color: teal;
+        text-align: center;
+      }
+      div{
+        text-align: left;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Museum Ticket Generator</h1>
+    <h2>Enter Your Information:</h2>
+    <label for="Day">Day of the Week:</label>
+    <select name="Day:" id="Day">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select><br><br>
+    <label for="age">Age:</label>
+    <input type="number" id="Age" name="Age"><br><br>
+    <label for="couponcode">Coupon Code:</label>
+    <input type="text" id= "Code" name="Code"><br><br>
+    <button onclick="displayPrice()" name="button">Find my price!</button>
+    <p id="Price">[Price]</p>
+    <div>
+      <h2>Pricing Guidlines:</h2>
+      <p>Mondays</p>
+      <ul>
+        <li>All = $5</li>
+        <li>No Coupons Available</li>
+      </ul>
+      <p>Tuesday through Friday</p>
+      <ul>
+        <li>Children (5 and younger) = $5</li>
+        <li>Seniors (65 and older) = $5</li>
+        <li>All Other = $10</li>
+        <li>With Coupon Code = $5!</li>
+      </ul>
+      <p>Weekends</p>
+      <ul>
+        <li>All = $15</li>
+        <li>No Coupon Codes Available.</li>
+      </ul>
+    </div>
+  </body>
+</html>
