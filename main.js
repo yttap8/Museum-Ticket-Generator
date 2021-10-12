@@ -27,11 +27,11 @@ function couponCode(){
   code = document.getElementById("Code").value;
   if (code == "APCSP" && day == "Tuesday"){
     price =5;}
-  if (code == "APCSP" && day == "Wednesday"){
+  else if (code == "APCSP" && day == "Wednesday"){
     price =5;}
-  if (code == "APCSP" && day == "Thursday"){
+  else if (code == "APCSP" && day == "Thursday"){
     price =5;}
-  if (code == "APCSP" && day == "Friday"){
+  else if (code == "APCSP" && day == "Friday"){
     price =5;}
 }
 
