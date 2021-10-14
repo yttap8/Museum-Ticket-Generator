@@ -8,10 +8,22 @@
       body{
         background-color: teal;
         text-align: center;
+        font-family: 'Courier New'
       }
       div{
         text-align: left;
+        margin: auto;
         background-color: yellow;
+        width: 350px;
+      }
+      button{
+        width: 150px;
+        height: 40px;
+        border-radius: 25px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: blue;
+        border: none;
       }
     </style>
   </head>
@@ -33,7 +45,7 @@
     <label for="couponcode">Coupon Code:</label>
     <input type="text" id= "Code" name="Code"><br><br>
     <button onclick="displayPrice()" name="button">Find my price!</button>
-    <p id="Price">[Price]</p>
+    <p id="Price" style="font-size: 30px">[Price]</p>
     <div>
       <h2>Pricing Guidlines:</h2>
       <p>Mondays</p>

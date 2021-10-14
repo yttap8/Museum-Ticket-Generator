@@ -1,8 +1,10 @@
+//global variables that will be changed later
 var price = 10;
 var day = "";
 var age = 0;
 var code = "";
 
+//changes the price depending on the day of week selected
 function changePriceDay(){
   day = document.getElementById("Day").value;
   if (day == "Saturday"){
@@ -14,6 +16,7 @@ function changePriceDay(){
   }
 }
 
+//changes the price depending on user input of age
 function changePriceAge(){
   age = document.getElementById("Age").value;
   if (age<=5){
@@ -23,6 +26,7 @@ function changePriceAge(){
   }
 }
 
+//changes the price depending on user input of coupon code
 function couponCode(){
   code = document.getElementById("Code").value;
   if (code == "APCSP" && day == "Tuesday"){
@@ -35,10 +39,11 @@ function couponCode(){
     price =5;}
 }
 
+//runs the functions to change price and then displays the number with dollar sign
 function displayPrice(){
   price = 10;
   changePriceAge();
   changePriceDay();
   couponCode();
-  document.getElementById("Price").innerHTML = price;
+  document.getElementById("Price").innerHTML = "$" + price;
 }
