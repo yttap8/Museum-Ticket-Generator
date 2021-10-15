@@ -4,7 +4,7 @@ var day = "";
 var age = 0;
 var code = "";
 
-//changes the price depending on the day of week selected
+//changes the price so that weekends = 15 and mondays = 5 depending on value from day of week input
 function changePriceDay(){
   day = document.getElementById("Day").value;
   if (day == "Saturday"){
@@ -16,7 +16,7 @@ function changePriceDay(){
   }
 }
 
-//changes the price depending on user input of age
+//changes the price so that 5&under and 65&over = 5 depending on user input of age
 function changePriceAge(){
   age = document.getElementById("Age").value;
   if (age<=5){
@@ -26,7 +26,7 @@ function changePriceAge(){
   }
 }
 
-//changes the price depending on user input of coupon code
+//changes the price depending on user input of coupon code and day of week. Coupon "APCSP" does not work on weekends and monday.
 function couponCode(){
   code = document.getElementById("Code").value;
   if (code == "APCSP" && day == "Tuesday"){
@@ -39,11 +39,11 @@ function couponCode(){
     price =5;}
 }
 
-//runs the functions to change price and then displays the number with dollar sign
+//runs all the functions above to change the price and then displays the number with dollar sign
 function displayPrice(){
   price = 10;
   changePriceAge();
   changePriceDay();
   couponCode();
-  document.getElementById("Price").innerHTML = "$" + price;
+  document.getElementById("Price").innerHTML = "$" + price + ", " + age + " years old, " + day;
 }
